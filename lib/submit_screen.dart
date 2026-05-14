@@ -40,7 +40,7 @@ class _SubmitTugasScreenState extends State<SubmitTugasScreen> {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: const Text('Tugas berhasil dikumpulkan! 🎉'),
+            content: const Text('Tugas berhasil dikumpulkan!'),
             backgroundColor: Colors.green.shade700,
             behavior: SnackBarBehavior.floating,
           ),
@@ -74,31 +74,9 @@ class _SubmitTugasScreenState extends State<SubmitTugasScreen> {
         padding: const EdgeInsets.all(24.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.green.shade50,
-                borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: Colors.green.shade200),
-              ),
-              child: Row(
-                children: [
-                  Icon(Icons.info_outline, color: Colors.green.shade700),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: Text(
-                      "Pastikan link GitHub yang Anda masukkan valid dan repository bersifat publik.",
-                      style: TextStyle(color: Colors.green.shade800, fontSize: 13),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 24),
-            
+          children: [  
             _buildTextField(
-              label: "Nama Produk / Tugas", 
+              label: "Nama Tugas", 
               icon: Icons.label_important_outline,
               onChanged: (value) => _name = value,
             ),
